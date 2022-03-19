@@ -1,0 +1,50 @@
+<div>
+
+  <div>
+    <form [formGroup]="dForm">
+
+      <div>
+        <label>
+          <tui-input
+            formControlName="name"
+            tuiTextfieldSize="m"
+          >
+            Name<span class="tui-required"></span>
+          </tui-input>
+          <tui-field-error
+            formControlName="name"
+          ></tui-field-error>
+        </label>
+      </div>
+
+      <div class="t-mt-1">
+        <label>
+          <tui-input
+            formControlName="name2"
+            tuiTextfieldSize="m"
+          >
+            Name 2<span class="tui-required"></span>
+          </tui-input>
+          <tui-error
+            formControlName="name2"
+            [error]="[] | tuiFieldError | async"
+          ></tui-error>
+        </label>
+      </div>
+    </form>
+  </div>
+
+  <div class="t-mt-2">
+    <button
+      tuiButton
+      class="tui-form__button"
+      size="m"
+      type="submit"
+      appearance="primary"
+      (click)="closeModal(null)"
+    >
+      close
+    </button>
+  </div>
+
+</div>

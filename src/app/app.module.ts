@@ -9,11 +9,13 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {TuiFieldErrorModule, TuiFieldErrorPipeModule, TuiInputModule} from "@taiga-ui/kit";
 import {NewCustomModalComponent} from './components/new-custom-modal/new-custom-modal.component';
 import {NEW_CUSTOM_MODAL_PROVIDER} from "./components/new-custom-modal/new-custom-modal.service";
+import { NewDefaultDialogComponent } from './components/new-default-dialog/new-default-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NewCustomModalComponent
+    NewCustomModalComponent,
+    NewDefaultDialogComponent
   ],
   imports: [
     BrowserModule,
