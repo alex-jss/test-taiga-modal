@@ -4,6 +4,7 @@ import {NewCustomModalService} from "./components/new-custom-modal/new-custom-mo
 import {NewCustomModalComponent} from "./components/new-custom-modal/new-custom-modal.component";
 import {TuiDialogService} from "@taiga-ui/core";
 import {NewDefaultDialogComponent} from "./components/new-default-dialog/new-default-dialog.component";
+import {SecondCustomDialogComponent} from "./components/second-custom-dialog/second-custom-dialog.component";
 
 @Component({
   selector: 'app-root',
@@ -24,6 +25,21 @@ export class AppComponent {
 
   openDialog() {
     const dialogRef = this.newCustomModalService.open(new PolymorpheusComponent(NewCustomModalComponent, this.injector), {
+      label: '',
+      closeable: false,
+      dismissible: false,
+      required: true,
+      size: 'm',
+      data: {}
+    });
+
+    dialogRef.subscribe(async (_resData: any) => {
+
+    });
+  }
+
+  openSecondDialog() {
+    const dialogRef = this.newCustomModalService.open(new PolymorpheusComponent(SecondCustomDialogComponent, this.injector), {
       label: '',
       closeable: false,
       dismissible: false,

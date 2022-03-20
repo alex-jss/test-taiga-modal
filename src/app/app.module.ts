@@ -10,12 +10,15 @@ import {TuiFieldErrorModule, TuiFieldErrorPipeModule, TuiInputModule} from "@tai
 import {NewCustomModalComponent} from './components/new-custom-modal/new-custom-modal.component';
 import {NEW_CUSTOM_MODAL_PROVIDER} from "./components/new-custom-modal/new-custom-modal.service";
 import { NewDefaultDialogComponent } from './components/new-default-dialog/new-default-dialog.component';
+import { SecondCustomDialogComponent } from './components/second-custom-dialog/second-custom-dialog.component';
+import {SECOND_CUSTOM_MODAL_PROVIDER} from "./components/second-custom-dialog/second-custom-modal.service";
 
 @NgModule({
   declarations: [
     AppComponent,
     NewCustomModalComponent,
-    NewDefaultDialogComponent
+    NewDefaultDialogComponent,
+    SecondCustomDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,8 @@ import { NewDefaultDialogComponent } from './components/new-default-dialog/new-d
   ],
   providers: [
     {provide: TUI_SANITIZER, useClass: NgDompurifySanitizer},
-    NEW_CUSTOM_MODAL_PROVIDER
+    NEW_CUSTOM_MODAL_PROVIDER,
+    SECOND_CUSTOM_MODAL_PROVIDER
   ],
   bootstrap: [AppComponent]
 })

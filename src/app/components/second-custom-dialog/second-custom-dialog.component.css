@@ -1,0 +1,10 @@
+:host {
+  display: block;
+  padding: 1.5rem;
+  margin: auto;
+  background: white;
+  animation: tuiReveal var(--tui-duration), tuiFadeIn var(--tui-duration);
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 20rem;
+}
